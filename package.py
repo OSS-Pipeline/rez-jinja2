@@ -28,10 +28,4 @@ with scope("config") as config:
 uuid = "jinja-{version}".format(version=str(version))
 
 def commands():
-    env.PATH.prepend("{root}/bin")
     env.PYTHONPATH.prepend("{root}")
-
-    # Helper environment variables.
-    env.JINJA_BINARY_PATH.set("{root}/bin")
-    env.JINJA_INCLUDE_PATH.set("{root}/numpy/core/include")
-    env.JINJA_LIBRARY_PATH.set("{root}/numpy/core/lib")
