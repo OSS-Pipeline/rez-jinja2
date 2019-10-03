@@ -1,4 +1,4 @@
-name = "jinja"
+name = "jinja2"
 
 version = "2.10.1"
 
@@ -25,7 +25,7 @@ build_system = "cmake"
 with scope("config") as config:
     config.build_thread_count = "logical_cores"
 
-uuid = "jinja-{version}".format(version=str(version))
+uuid = "jinja2-{version}".format(version=str(version))
 
 def commands():
     env.PYTHONPATH.prepend("{root}")

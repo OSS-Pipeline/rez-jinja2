@@ -4,13 +4,13 @@ include(RezBuild)
 include(RezRepository)
 include(ExternalProject)
 
-# Jinja
+# Jinja2
 rez_set_archive(
     # This is a relative path from the ${REZ_REPO_PAYLOAD_DIR} environment variable,
     # that is pointing to the root directory where we can find all the archives of the package
     # we can build, using the following hierarchy:
     # "${REZ_REPO_PAYLOAD_DIR}/project_name/archive.what.ever"
-    JINJA_URL jinja/Jinja2-${REZ_BUILD_PROJECT_VERSION}-py2.py3-none-any.whl
+    JINJA_URL jinja2/Jinja2-${REZ_BUILD_PROJECT_VERSION}-py2.py3-none-any.whl
     https://files.pythonhosted.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-${REZ_BUILD_PROJECT_VERSION}-py2.py3-none-any.whl
 )
 
@@ -33,6 +33,6 @@ endif()
 install(
     CODE
     "execute_process(
-        COMMAND echo \"\n[CMAKE] Jinja-${REZ_BUILD_PROJECT_VERSION} PACKAGE SETUP FINISHED!\n\"
+        COMMAND echo \"\n[CMAKE] Jinja2-${REZ_BUILD_PROJECT_VERSION} PACKAGE SETUP FINISHED!\n\"
     )"
 )

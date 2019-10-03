@@ -15,8 +15,8 @@ echo -e "==============="
 echo -e "\n"
 
 echo -e "[INSTALL][ARGS] INSTALL PATH: ${INSTALL_PATH}"
-echo -e "[INSTALL][ARGS] JINJA URL: ${JINJA_URL}"
-echo -e "[INSTALL][ARGS] JINJA VERSION: ${JINJA_VERSION}"
+echo -e "[INSTALL][ARGS] JINJA2 URL: ${JINJA_URL}"
+echo -e "[INSTALL][ARGS] JINJA2 VERSION: ${JINJA_VERSION}"
 
 # We check if the arguments variables we need are correctly set.
 # If not, we abort the process.
@@ -28,9 +28,9 @@ if [[ -z ${INSTALL_PATH} || -z ${JINJA_URL} || -z ${JINJA_VERSION} ]]; then
     exit 1
 fi
 
-# We install Jinja.
+# We install Jinja2.
 echo -e "\n"
-echo -e "[INSTALL] Installing Jinja-${JINJA_VERSION}..."
+echo -e "[INSTALL] Installing Jinja2-${JINJA_VERSION}..."
 echo -e "\n"
 
 # We copy the necessary files to the install directory.
@@ -41,5 +41,5 @@ pip2 \
     --no-dependencies
 
 echo -e "\n"
-echo -e "[INSTALL] Finished installing Jinja-${JINJA_VERSION}!"
+echo -e "[INSTALL] Finished installing Jinja2-${JINJA_VERSION}!"
 echo -e "\n"
